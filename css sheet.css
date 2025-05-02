@@ -1,0 +1,144 @@
+body{
+	display:flex;
+	justify-content:center;
+	align-items:center;
+	min-height:100vh;
+	background-color:black;
+}
+nav a i {
+  margin-right: 8px;
+}
+text{
+	color:yellow;
+}
+
+.logo {
+  position: fixed;
+  top: 20px;
+  left: 40px;
+  color: #33fffc;
+  font-size: 40px;
+  font-weight: bold;
+}
+
+nav {
+	position: fixed; 
+	top: 20px;       
+	right: 20px;     
+	width: 475px;
+	height: 50px;
+	background: #222;
+	border-radius: 10px;
+	display: flex;
+	justify-content: center;
+}
+nav a{
+	position:relative;
+	display:inline-block;
+	font-size:1em;
+	font-weight:500;
+	color:white;
+	text-decoration:none;
+	padding:0 23px;
+	z-index:1;
+}
+nav span{
+	position:absolute;
+	top:0;
+	left:0;
+	width:95px;
+	height:100%;
+	border-radius:10px;
+	background:linear-gradient(45deg,#194b4f,#33fffc);
+	transition:0.5s;
+}
+nav a:nth-child(1):hover~span{left:0px;}
+
+nav a:nth-child(2):hover~span{left:90px;}
+
+nav a:nth-child(3):hover~span{left:180px;}
+
+nav a:nth-child(4):hover~span{left:275px;}
+
+nav a:nth-child(5):hover~span{left:380px;}
+
+.hero {
+  text-align: center;
+  color: white;
+  margin-top: 150px;
+}
+
+.hero h1 {
+  font-size: 48px;
+  margin-bottom: 10px;
+}
+
+.hero p {
+  font-size: 20px;
+  margin-bottom: 20px;
+}
+
+.hero .btn {
+  background: #33fffc;
+  color: black;
+  padding: 10px 20px;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: bold;
+}
+.background-slider {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  animation: slideShow 15s infinite;
+  background-size: cover;
+  background-position: center;
+}
+
+
+@keyframes slideShow {
+  0%   { background-image: url('path.jpg'); }
+  33%  { background-image: url('physics.jpg'); }
+  40%  { background-image: url('labs.jpg'); }
+  60%  { background-image: url('code.jpg'); }
+  70%  { background-image: url('collegues.jpg'); }
+  100% { background-image: url('caps.jpg'); }
+}
+.background-fade {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  z-index: -1;
+}
+
+.bg {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+  opacity: 0;
+  animation: fadeShow 36s infinite;
+  transition: opacity 1.5s ease-in-out;
+}
+
+.bg1 { background-image: url('path.jpg'); animation-delay: 0s; }
+.bg2 { background-image: url('physics.jpg'); animation-delay: 6s; }
+.bg3 { background-image: url('labs.jpg'); animation-delay: 12s; }
+.bg4 { background-image: url('code.jpg'); animation-delay: 18s; }
+.bg5 { background-image: url('collegues.jpg'); animation-delay: 24s; }
+.bg6 { background-image: url('caps.jpg'); animation-delay: 30s; }
+
+@keyframes fadeShow {
+  0%   { opacity: 0; }
+  8%   { opacity: 1; }
+  25%  { opacity: 1; }
+  33%  { opacity: 0; }
+  100% { opacity: 0; }
+}
